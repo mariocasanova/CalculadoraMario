@@ -3,8 +3,8 @@
       margin:0 auto;
       padding:20px;
       background-color:#2980b9;
-      width:300px;
-      height:500px;
+      width:350px;
+      height:550px;
       border-radius: 25px;
     }
     .calculadora td button{
@@ -30,5 +30,4 @@
       line-height: 100px;
       background-color:#fff;
       border-radius: 25px;
-      overflow-y: scroll;
     }
