@@ -82,11 +82,11 @@ var operacion;
           resoldre();
 
       function llimpiar(){
-      resultado.textContent = "";
+      resultat.textContent = "";
       }
 
       function resetejar(){
-      resultado.textContent = "";
+      resultat.textContent = "";
       operandoa = 0;
       operandob = 0;
       operacio = "";
