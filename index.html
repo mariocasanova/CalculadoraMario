@@ -1,89 +1,60 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Werner</title>
-  </head>
-  <body bgcolor="#E6E6FA">
+    <head>
+	    <meta charset="UTF-8">
+	    <title>Calcul Mario</title>
+	    <link type="text/css" href="estil.css" rel="stylesheet">
+    </head>
+    <body onload="init();">
+	    <table class="calculadora">
+	    <tr>
+	      <td colspan="4"><span id="resultat"></span></td>
+	    </tr>
+	    <tr>
+	      <td><button id="set">7</button>
+		</td><td>
+		<button id="vuit">8</button>
+		</td><td>
+		<button id="nou">9</button>
+		</td><td>
+		<button id="divisio">/</button>
+		</td>
+	    </tr>
+	    <tr>
+	      <td><button id="quatre">4</button>
+		</td><td>
+		<button id="cinc">5</button>
+		</td><td>
+		<button id="sis">6</button>
+		</td><td>
+		<button id="multiplicacio">*</button>
+		</td>
+	    </tr>
+	    <tr>
+	      <td><button id="u">1</button>
+		</td><td>
+		    <button id="dos">2</button>
+		</td><td>
+		    <button id="tres">3</button>
+		</td><td>
+		    <button id="resta">-</button>
+		</td>
+	    </tr>
+	    <tr>
+	      <td>
+		<button id="igual">=</button>
+		</td><td>
+		<button id="resetejar">C</button>
+		</td><td>
+		<button id="zero">0</button>
+		</td><td>
+		<button id="suma">+</button>
+		</td>
+	    </tr>
+	    <tr>
+	      <td colspan="4"><span id="credits">Mario Casanova Aige</span></td>
+	    </tr>
+	    </table>
     <script src="calculadora.js"></script>
-    <table style="width: 20%;" border="2" align="center" bgcolor="#00008B">
-    <tbody>
-    <tr>
-    <td>
-      <button onclick="TeclatNumeric(1)"> <img src="images/boto1.png" width="100"/> </button>
-    </td>
-    <td>
-      <button onclick="TeclatNumeric(2)"> <img src="images/boto2.png" width="100"/> </button>
-    </td>
-    <td>
-      <button onclick="TeclatNumeric(3)"> <img src="images/boto3.png" width="100"/> </button>
-    </td>
-    <td>
-      <button onclick="TeclatNumeric(20)"> <img src="images/dividir.png" width="100"/> </button>
-    </td>
-    </tr>
-    <tr>
-    <td>
-      <button onclick="TeclatNumeric(4)"> <img src="images/boto4.png" width="100"/> </button>
-    </td>
-    <td>
-      <button onclick="TeclatNumeric(5)"> <img src="images/boto5.png" width="100"/> </button>
-    </td>
-    <td>
-      <button onclick="TeclatNumeric(6)"> <img src="images/boto6.png" width="100"/> </button>
-    </td>
-    <td>
-      <button onclick="TeclatNumeric(21)"> <img src="images/multiplicar.png" width="100"/> </button>
-    </td>
-    </tr>
-    <tr>
-    <td>
-      <button onclick="TeclatNumeric(7)"> <img src="images/boto7.png" width="100"/> </button>
-    </td>
-    <td>
-      <button onclick="TeclatNumeric(8)"> <img src="images/boto8.png" width="100"/> </button>
-    </td>
-    <td>
-      <button onclick="TeclatNumeric(9)"> <img src="images/boto9.png" width="100"/> </button>
-    </td>
-    <td>
-      <button onclick="TeclatNumeric(22)"> <img src="images/suma.png" width="100"/> </button>
-    </td>
-    </tr>
-    <tr>
-    <td>
-      <button onclick="borrar()"> <img src="images/123.png" width="100"/> </button>
-    </td>
-    <td>
-      <button onclick="TeclatNumeric(0)"> <img src="images/boto0.png" width="100"/> </button>
-    </td>
-    <td>
-      <button onclick="TeclatNumeric(0)"> <img src="images/resultat.png" width="100"/> </button>
-    </td>
-    <td>
-      <button onclick="TeclatNumeric(23)"> <img src="images/resta.png" width="100"/> </button>
-    </td>
-    </tr>
-    </tbody>
-    </table>
-    <!-- DivTable.com -->
-    <br />
-    <table style="width: 20%;" border="2" align="center" bgcolor="#8B0000">
-    <td>
-    <b>Resultat:</b>
-    <span id="resultat"></span>
-    </td>
-    </table>
-      <br />
-      <form method="get" action="index.html" align=center>
-      <button type="submit"> Menu Principal </button>
-      </form>
-      <br />
-      <form method="get" action="calculadoraCientifica.html" align=center>
-      <button type="submit"> Calculadora Científica </button>
-      </form>
-      <h5 align="center">Created by: Werner Nüesch Boncompte</h5>
-      <h5 align="center"
-      >Versió: Alpha 1.2 M6</h5>
-    <!-- DivTable.com -->
-  </body>
+    </body>
 </html>

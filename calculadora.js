@@ -1,87 +1,122 @@
-var n1 = -1;
-var n2 = -1;
-var operant = -1;
+var operandoa;
+var operandob;
+var operacio;
 
-function TeclatNumeric(numero) {
-//AGAFAR PRIMER NUMERO
-if (n1 == -1) {
-PrimerNumero(numero);
+    function init(){
+      //variables
+      var resultat = document.getElementById("resultat");
+      var reset = document.getElementById("reset");
+      var suma = document.getElementById("suma");
+      var resta = document.getElementById("resta");
+      var multiplicacio = document.getElementById("multiplicacio");
+      var divisio = document.getElementById("divisio");
+      var igual = document.getElementById("igual");
+      var u = document.getElementById("u");
+      var dos = document.getElementById("dos");
+      var tres = document.getElementById("tres");
+      var quatre = document.getElementById("quatre");
+      var cinc = document.getElementById("cinc");
+      var sis = document.getElementById("sis");
+      var set = document.getElementById("set");
+      var vuit = document.getElementById("vuit");
+      var nou = document.getElementById("nou");
+      var zero = document.getElementById("zero");
+
+      //Eventos de click
+      u.onclick = function(e){
+          resultat.textContent = resultat.textContent  + "1";
+      }
+      dos.onclick = function(e){
+          resultat.textContent = resultat.textContent  + "2";
+      }
+      tres.onclick = function(e){
+          resultat.textContent = resultat.textContent  + "3";
+      }
+      quatre.onclick = function(e){
+          resultat.textContent = resultat.textContent  + "4";
+      }
+      cinc.onclick = function(e){
+          resultat.textContent = resultat.textContent  + "5";
+      }
+      sis.onclick = function(e){
+          resultat.textContent = resultat.textContent  + "6";
+      }
+      set.onclick = function(e){
+          resultat.textContent = resultat.textContent  + "7";
+      }
+      vuit.onclick = function(e){
+          resultat.textContent = resultat.textContent  + "8";
+      }
+      nou.onclick = function(e){
+          resultat.textContent = resultat.textContent  + "9";
+      }
+      zero.onclick = function(e){
+          resultat.textContent = resultat.textContent  + "0";
+      }
+
+
+      reset.onclick = function(e){
+          resetejar();
+      }
+
+      suma.onclick = function(e){
+          operandoa = resultat.textContent;
+          operacio = "+";
+	  llimpiar();
+      }
+
+      resta.onclick = function(e){
+          operandoa = resultat.textContent;
+          operacio = "-";
+	  llimpiar();
+      }
+
+      multiplicacio.onclick = function(e){
+          operandoa = resultat.textContent;
+          operacio = "*";
+	  llimpiar();
+      }
+
+      divisio.onclick = function(e){
+          operandoa = resultat.textContent;
+          operacio = "/";
+	  llimpiar();
+      }
+
+      igual.onclick = function(e){
+          operandob = resultat.textContent;
+          resoldre();
+	  
+
+      function llimpiar(){
+      resultat.textContent = "";
+      }
+
+      function resetejar(){
+      resultat.textContent = "";
+      operandoa = 0;
+      operandob = 0;
+      operacio = "";
+      }
+
+    function resoldre(){
+      var res = 0;
+      switch(operacio){
+        case "+":
+          res = parseFloat(operandoa) + parseFloat(operandob);
+          break;
+        case "-":
+            res = parseFloat(operandoa) - parseFloat(operandob);
+            break;
+        case "*":
+          res = parseFloat(operandoa) * parseFloat(operandob);
+          break;
+        case "/":
+          res = parseFloat(operandoa) / parseFloat(operandob);
+          break;
+      }
+      resetejar();
+      resultat.textContent = res;
+    }
 }
-
-//AGAFAR OPERANT
-else if (operant == -1) {
-Operants(numero);
-}
-
-//AGAFAR SEGON NUMERO
-else if (n2 == -1) {
-SegonNumero(numero);
-}
-
-//SI N1 I N2 I OPERANT ELEGITS
-else if (n1 != -1 && n2 != -1 && operant != -1) {
-//SUMA
-if (operant == 22) {
-suma(n1, n2);
-//MULTIPLICACIO
-} else if (operant == 21) {
-multiplicar(n1, n2);
-//DIVISIO
-} else if (operant == 20) {
-dividir(n1, n2);
-//RESTA
-} else if (operant == 23) {
-resta(n1, n2);
-}
-}
-
-
-}
-
-function PrimerNumero(primerDonat) {
-n1 = primerDonat;
-}
-
-function SegonNumero(segonDonat) {
-n2 = segonDonat;
-}
-
-function Operants(operantdonat) {
-operant = operantdonat;
-
-}
-
-function resultatfinal(resultatdonat){
-resultat = resultatdonat;
-}
-
-function borrar() {
-n1 = -1;
-n2 = -1;
-operant = -1;
-
-}
-//
-function resta(n1, n2) {
-var operacio = parseInt(n1) - parseInt(n2);
-borrar();
-document.getElementById("resultat").innerText = operacio;
-}
-
-function dividir(n1, n2) {
-var operacio = parseInt(n1) / parseInt(n2);
-document.getElementById("resultat").innerText = operacio;
-borrar();
-}
-
-function suma(n1, n2) {
-var operacio = parseInt(n1) + parseInt(n2);
-document.getElementById("resultat").innerText = operacio;
-borrar();
-}
-
-function multiplicar(n1, n2, final) {
-var operacio = parseInt(n1) * parseInt(n2);
-document.getElementById("resultat").innerText = operacio;
-borrar();
 }
