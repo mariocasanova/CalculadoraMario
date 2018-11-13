@@ -98,19 +98,14 @@ document.fo.valors.value="";
 } 
 
 }
-
-
-//realizar las operacionesmatematicas
-
-
 function calcular(){
-    var resultado=eval(document.fo.valores.value);
+    var resultat=eval(document.fo.valors.value);
 
-    if(resultado=="Infinity"){
-        document.fo.valores.value="No se puede dividir entre cero";
+    if(resultat=="Infinity"){
+        document.fo.valors.value="No es pot dividir entre zero";
 
     }else{
-        document.fo.valores.value=resultado;
+        document.fo.valors.value=resultat;
     }
     
 }
