@@ -1,26 +1,26 @@
 var operandoa;
 var operandob;
-var operacion;
+var operacio;
 
     function init(){
       //variables
-      var resultat = document.getElementById('resultat');
-      var reset = document.getElementById('reset');
-      var suma = document.getElementById('suma');
-      var resta = document.getElementById('resta');
-      var multiplicacio = document.getElementById('multiplicacio');
-      var divisio = document.getElementById('divisio');
-      var igual = document.getElementById('igual');
-      var u = document.getElementById('u');
-      var dos = document.getElementById('dos');
-      var tres = document.getElementById('tres');
-      var quatre = document.getElementById('quatre');
-      var cinc = document.getElementById('cinc');
-      var sis = document.getElementById('sis');
-      var set = document.getElementById('set');
-      var vuit = document.getElementById('vuit');
-      var nou = document.getElementById('nou');
-      var zero = document.getElementById('zero');
+      var resultat = document.getElementById("resultat");
+      var reset = document.getElementById("reset");
+      var suma = document.getElementById("suma");
+      var resta = document.getElementById("resta");
+      var multiplicacio = document.getElementById("multiplicacio");
+      var divisio = document.getElementById("divisio");
+      var igual = document.getElementById("igual");
+      var u = document.getElementById("u");
+      var dos = document.getElementById("dos");
+      var tres = document.getElementById("tres");
+      var quatre = document.getElementById("quatre");
+      var cinc = document.getElementById("cinc");
+      var sis = document.getElementById("sis");
+      var set = document.getElementById("set");
+      var vuit = document.getElementById("vuit");
+      var nou = document.getElementById("nou");
+      var zero = document.getElementById("zero");
 
       //Eventos de click
       u.onclick = function(e){
@@ -54,32 +54,39 @@ var operacion;
           resultat.textContent = resultat.textContent  + "0";
       }
 
+
       reset.onclick = function(e){
           resetejar();
       }
+
       suma.onclick = function(e){
           operandoa = resultat.textContent;
           operacio = "+";
-          llimpiar();
+	  llimpiar();
       }
+
       resta.onclick = function(e){
           operandoa = resultat.textContent;
           operacio = "-";
-          llimpiar();
+	  llimpiar();
       }
+
       multiplicacio.onclick = function(e){
           operandoa = resultat.textContent;
           operacio = "*";
-          llimpiar();
+	  llimpiar();
       }
+
       divisio.onclick = function(e){
           operandoa = resultat.textContent;
           operacio = "/";
-          llimpiar();
+	  llimpiar();
       }
+
       igual.onclick = function(e){
           operandob = resultat.textContent;
           resoldre();
+	  
 
       function llimpiar(){
       resultat.textContent = "";
@@ -111,4 +118,5 @@ var operacion;
       resetejar();
       resultat.textContent = res;
     }
+}
 }
