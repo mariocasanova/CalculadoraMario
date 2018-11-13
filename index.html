@@ -1,89 +1,97 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <title>Werner</title>
-  </head>
-  <body bgcolor="#E6E6FA">
-    <script src="calculadora.js"></script>
-    <table style="width: 20%;" border="2" align="center" bgcolor="#00008B">
-    <tbody>
+<head>
+  <meta charset="utf8">
+ <title>Mario</title>
+ <link type="text/css" href="estil.css" rel="stylesheet">
+ <script type="text/javascript" src="script.js"></script>
+
+<style>
+
+input[type=button],input[type="text"]{
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+}
+
+table,form{
+  width: 500px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+footer{
+  text-align: center;
+  font-size: 16px;
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+<form name="fo">
+
+  <h1>Calculadora Bàsica</h1>
+
+  <table class="calculadora">
+
     <tr>
-    <td>
-      <button onclick="TeclatNumeric(1)"> <img src="images/boto1.png" width="100"/> </button>
-    </td>
-    <td>
-      <button onclick="TeclatNumeric(2)"> <img src="images/boto2.png" width="100"/> </button>
-    </td>
-    <td>
-      <button onclick="TeclatNumeric(3)"> <img src="images/boto3.png" width="100"/> </button>
-    </td>
-    <td>
-      <button onclick="TeclatNumeric(20)"> <img src="images/dividir.png" width="100"/> </button>
-    </td>
+      <td colspan="5"><input type="text" name="valors" id="valors" onkeypress="return solnumeros(event)"></td>
+
     </tr>
+
     <tr>
-    <td>
-      <button onclick="TeclatNumeric(4)"> <img src="images/boto4.png" width="100"/> </button>
-    </td>
-    <td>
-      <button onclick="TeclatNumeric(5)"> <img src="images/boto5.png" width="100"/> </button>
-    </td>
-    <td>
-      <button onclick="TeclatNumeric(6)"> <img src="images/boto6.png" width="100"/> </button>
-    </td>
-    <td>
-      <button onclick="TeclatNumeric(21)"> <img src="images/multiplicar.png" width="100"/> </button>
-    </td>
+
+      <td><input type="button" value="7" onClick="retornar(value)"></td>
+      <td><input type="button" value="8" onClick="retornar(value)"></td>
+      <td><input type="button" value="9" onClick="retornar(value)"></td>
+      <td><input type="button" value="+" onclick="comprobar(value)"></td>
+      <td><input type="button" value="-" onclick="comprobar(value)"></td>
+
     </tr>
+
     <tr>
-    <td>
-      <button onclick="TeclatNumeric(7)"> <img src="images/boto7.png" width="100"/> </button>
-    </td>
-    <td>
-      <button onclick="TeclatNumeric(8)"> <img src="images/boto8.png" width="100"/> </button>
-    </td>
-    <td>
-      <button onclick="TeclatNumeric(9)"> <img src="images/boto9.png" width="100"/> </button>
-    </td>
-    <td>
-      <button onclick="TeclatNumeric(22)"> <img src="images/suma.png" width="100"/> </button>
-    </td>
+
+      <td><input type="button" value="4" onClick="retornar(value)"></td>
+      <td><input type="button" value="5" onClick="retornar(value)"></td>
+      <td><input type="button" value="6" onClick="retornar(value)"></td>
+      <td><input type="button" value="*" onclick="comprobar(value)"></td>
+      <td><input type="button" value="/" onclick="comprobar(value)"></td>
+
     </tr>
+
     <tr>
-    <td>
-      <button onclick="borrar()"> <img src="images/123.png" width="100"/> </button>
-    </td>
-    <td>
-      <button onclick="TeclatNumeric(0)"> <img src="images/boto0.png" width="100"/> </button>
-    </td>
-    <td>
-      <button onclick="TeclatNumeric(0)"> <img src="images/resultat.png" width="100"/> </button>
-    </td>
-    <td>
-      <button onclick="TeclatNumeric(23)"> <img src="images/resta.png" width="100"/> </button>
-    </td>
+
+      <td><input type="button" value="1" onClick="retornar(value)"></td>
+      <td><input type="button" value="2" onClick="retornar(value)"></td>
+      <td><input type="button" value="3" onClick="retornar(value)"></td>
+      <td><input type="button" value="<-" onclick="eliminar()"></td>
+      <td><input type="button" value="C" onclick="eliminar_tot()"></td>
+
     </tr>
-    </tbody>
-    </table>
-    <!-- DivTable.com -->
-    <br />
-    <table style="width: 20%;" border="2" align="center" bgcolor="#8B0000">
-    <td>
-    <b>Resultat:</b>
-    <span id="resultat"></span>
-    </td>
-    </table>
-      <br />
-      <form method="get" action="index.html" align=center>
-      <button type="submit"> Menu Principal </button>
-      </form>
-      <br />
-      <form method="get" action="calculadoraCientifica.html" align=center>
-      <button type="submit"> Calculadora Científica </button>
-      </form>
-      <h5 align="center">Created by: Werner Nüesch Boncompte</h5>
-      <h5 align="center"
-      >Versió: Alpha 1.2 M6</h5>
-    <!-- DivTable.com -->
-  </body>
+
+    <tr>
+
+      <td colspan="2"><input type="button" value="0" onClick="retornar(value)"></td>
+      <td></td>
+      <td colspan="2"><input type="button" value="=" onclick="calcular()"></td>
+
+
+    </tr>
+
+
+
+
+  </table>
+
+</form>
+<br><br><br><br><br>
+<footer>
+
+      Realitzat per  <a href="https://github.com/mariocasanova/CalculadoraMario">Mario Casanova Aige</a>
+
+  </footer>
+</body>
 </html>
